@@ -1,3 +1,7 @@
+import databaseSvg from '../assets/database.svg'
+import barChartSvg from '../assets/bar-chart.svg'
+import settingsSvg from '../assets/settings.svg'
+
 enum NavOptions {
   DataName = 'Data Name',
   Monitoring = 'Monitoring',
@@ -25,17 +29,17 @@ export const Nav = () => {
   return (
     <nav>
       <NavItem
-        imgSrc='src/assets/database.svg'
+        imgSrc={databaseSvg}
         imgAlt='Storage Icon'
         name={NavOptions.DataName}
       />
       <NavItem
-        imgSrc='src/assets/bar-chart.svg'
+        imgSrc={barChartSvg}
         imgAlt='Bar Chart Icon'
         name={NavOptions.Monitoring}
       />
       <NavItem
-        imgSrc='src/assets/settings.svg'
+        imgSrc={settingsSvg}
         imgAlt='Settings Icon'
         name={NavOptions.Settings}
       />
