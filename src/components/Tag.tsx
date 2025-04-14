@@ -1,4 +1,5 @@
 import * as types from '../utils/types'
+import plusSvg from '../assets/plus.svg'
 
 interface TagProps {
   tags: types.Tag[]
@@ -9,11 +10,7 @@ export const Tag = ({ tags = [] }: TagProps) => {
     <>
       {tags.length === 0 && (
         <button className='flex items-center space-x-1 px-3 py-1 border border-gray-200 rounded-full text-[#808593] text-sm font-medium hover:bg-gray-100'>
-          <img
-            src='src/assets/plus.svg'
-            alt='Add Tag'
-            className='w-2.5 h-2.5'
-          />
+          <img src={plusSvg} alt='Add Tag' className='w-2.5 h-2.5' />
           <span>Add Tag</span>
         </button>
       )}

@@ -1,6 +1,8 @@
 import { Workflow } from '../utils/types'
 import { Tag } from './Tag'
 import { Name } from './Name'
+import pencilSvg from '../assets/pencil.svg'
+import trashSvg from '../assets/trash.svg'
 
 const formatRelativeDate = (date: Date) => {
   const now = new Date()
@@ -46,10 +48,10 @@ export const ContentItem = ({ type, name, tags, last_updated }: Workflow) => (
     <td className='border-b border-gray-200 px-2 py-5 font-medium text-[14px] leading-[20px] tracking-normal text-center w-[88px]'>
       <div className='flex gap-2 justify-start'>
         <button className='flex items-center'>
-          <img src='src/assets/pencil.svg' alt='Edit' className='w-6 h-6' />
+          <img src={pencilSvg} alt='Edit' className='w-6 h-6' />
         </button>
         <button className='flex items-center'>
-          <img src='src/assets/trash.svg' alt='Delete' className='w-6 h-6' />
+          <img src={trashSvg} alt='Delete' className='w-6 h-6' />
         </button>
       </div>
     </td>

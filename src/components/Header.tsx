@@ -1,3 +1,6 @@
+import arrowDropDownSvg from '../assets/arrow_drop_down.svg';
+import searchSvg from '../assets/search.svg';
+
 interface HeaderProps {
   searchQuery: string
   setSearchQuery: (query: string) => void
@@ -29,14 +32,14 @@ export const Header = ({
             <option value='date'>Date</option>
           </select>
           <img
-            src='src/assets/arrow_drop_down.svg'
+            src={arrowDropDownSvg}
             alt='Dropdown Arrow'
             className='absolute right-2 top-1/2 transform -translate-y-1/2 pointer-events-none'
           />
         </div>
         <div className='flex items-center h-[32px] border border-gray-300 rounded-[6px] shadow-sm px-[12px] w-full bg-white'>
           <img
-            src='src/assets/search.svg'
+            src={searchSvg}
             alt='Search Icon'
             className='w-4 h-4 text-gray-500 mr-2'
           />
