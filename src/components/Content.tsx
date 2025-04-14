@@ -13,9 +13,9 @@ export const Content = () => {
   const [sortQuery, setSortQuery] = useState<string>('')
 
   useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true)
+    const fetchData = async (): Promise<void> => {
       try {
+        setLoading(true)
         const body = {
           inputs: {},
         }
@@ -40,10 +40,16 @@ export const Content = () => {
         const workflowMockData: ApiResponse = await response.json()
         setData(workflowMockData.result)
       } catch (error) {
-        console.log('🚀 > fetchData > error:', error)
-        setError('Something went wrong while fetching your data :(')
+        if (error instanceof Error) {
+          console.error('🚀 > fetchData > error:', error.message)
+          setError('Something went wrong while fetching your data :(')
+        } else {
+          console.error('🚀 > fetchData > unknown error:', error)
+          setError('An unknown error occurred.')
+        }
+      } finally {
+        setLoading(false)
       }
-      setLoading(false)
     }
 
     fetchData()
@@ -59,7 +65,7 @@ export const Content = () => {
     window.history.replaceState({}, '', url.toString())
   }, [searchQuery, sortQuery])
 
-  const filteredData = data
+  const filteredData: Workflow[] = data
     .filter(
       (item) =>
         item.name.text.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -123,7 +129,7 @@ export const Content = () => {
               <ContentItem key={index} {...item} />
             ))}
 
-          {filteredData.length === 0 && !loading && (
+          {filteredData.length === 0 && !loading && !error && (
             <tr>
               <td colSpan={5} className='pt-10'>
                 <p className='text-body-lg font-semibold flex flex-col items-center gap-4 text-center'>
