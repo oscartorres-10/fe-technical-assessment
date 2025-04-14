@@ -1,13 +1,17 @@
+export interface Name {
+  emoji: string,
+  text: string
+}
+
+export interface Tag {
+  text: string
+  color: string
+}
+
 export interface Workflow {
   type: string
-  name: {
-    emoji: string
-    text: string
-  }
-  tags: {
-    text: string,
-    color: string
-  }[]
+  name: Name
+  tags: Tag[]
   last_updated: string
 }
 

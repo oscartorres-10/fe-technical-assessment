@@ -1,7 +1,7 @@
-import { Workflow } from '../utils/types'
+import * as types from '../utils/types'
 
 interface TagProps {
-  tags: Workflow['tags']
+  tags: types.Tag[]
 }
 
 export const Tag = ({ tags = [] }: TagProps) => {
