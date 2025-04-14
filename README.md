@@ -16,6 +16,7 @@ Thanks for your review!
 - Loading state could be done with [Suspense](https://react.dev/reference/react/Suspense#displaying-a-fallback-while-content-is-loading) for a better integration with React. Also an [Skeleton](https://ui.shadcn.com/docs/components/skeleton) would be nicer.
 - Error handling could be done with an [Error Boundary](https://react.dev/reference/react/useTransition#displaying-an-error-to-users-with-error-boundary).
 - Unit tests could be added with a tool like Jest
+- A "clear input" button with an "X" icon could be added to the Search.
 
 ## Gen AI usage
 
@@ -28,7 +29,7 @@ Thanks for your review!
 
 - Deployed it via Vercel: <https://fe-technical-assessment-oscar-torres.vercel.app/>
 
----
+## Instructions
 
 <details>
   <summary>
