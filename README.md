@@ -18,6 +18,8 @@ Thanks for your review!
 - Unit tests could be added with a tool like Jest
 - A "clear input" button with an "X" icon could be added to the Search.
 - Content component is too large, I would refactor a bit and take things out of it. For example the API call could be moved to another folder, it could be something like `src/api`.
+- Use Container/Presentational components pattern in more places.
+- More structured code. Ideas: separate big components in folders per feature, add more smaller components inside each big component, separate helper functions out to utils folder, add services folder.
 
 ## Gen AI usage
 
