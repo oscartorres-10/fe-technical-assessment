@@ -17,6 +17,7 @@ Thanks for your review!
 - Error handling could be done with an [Error Boundary](https://react.dev/reference/react/useTransition#displaying-an-error-to-users-with-error-boundary).
 - Unit tests could be added with a tool like Jest
 - A "clear input" button with an "X" icon could be added to the Search.
+- Content component is too large, I would refactor a bit and take things out of it. For example the API call could be moved to another folder, it could be something like `src/api`.
 
 ## Gen AI usage
 
